@@ -1,0 +1,5 @@
+fileName,expectedTime,client,category,expectedOccurrences
+<dateToken1>_chargebacks,14:03,Paylience,Chargebacks,1
+<dateToken1>_exceptions,14:03,Paylience,Exceptions,1
+<dateToken1>_transactions,14:03,Paylience,Transactions,3
+ZIFTPAYP.POSR_ADF_<dateToken>,14:03,Ziftpay,ZIFTPAY,13
