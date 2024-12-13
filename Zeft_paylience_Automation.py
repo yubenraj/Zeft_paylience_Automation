@@ -314,7 +314,6 @@ def monitor_local_folders():
                                 })
                 for file_name in error_files_reported:
                     if file_name in input_files:
-                        if file_name not in reparsed_files:
                             expected_file_details = next((exp for exp in expected_files if replace_date_tokens(exp['fileName'], current_time).strip() in file_name), None)
                             if expected_file_details:
                                 client = expected_file_details.get('client', 'Unknown')
@@ -335,7 +334,7 @@ def monitor_local_folders():
                 send_batch_to_new_relic(event_batch)
                 event_batch = []
 
-            time.sleep(20)
+            time.sleep(10)
 
         except KeyboardInterrupt:
             logging.info("Monitoring stopped by user.")
